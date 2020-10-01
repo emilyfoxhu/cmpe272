@@ -1,0 +1,4 @@
+Company name: Bread & Sweets
+Address: Camero Ave, L City
+Tel: 777-123-1234
+Manager: Yi Hu
