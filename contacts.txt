@@ -1,4 +1,5 @@
 Company name: Bread & Sweets
 Address: Camero Ave, L City
-Tel: 777-123-1234
+Tel: 777-777-7777
 Manager: Yi Hu
+Email: yi.hu@sjsu.edu
