@@ -38,9 +38,22 @@
       <h3>&nbsp;</h3>
       <h3>contact information&nbsp;</h3>
 		<p>
-		<? php $file = new SPLFileObject('contacts.txt');
-		foreach($file as $line) {
-			echo $line;
+		<?php 
+		$file = $_FILES["contacts.txt"];
+		$path = $file["tmp_name"];
+		$type = $file["type"];
+		if($type == "text/plain"){//check if it is a txt file
+			if(file_exists($path)){//check if contacts.txt exists
+				$object = fopen($path, "r");//read file to the end of file
+				while (!feof($object)){
+					$line = fgets($object);
+					echo $line. "<br />";
+				}
+			}else{
+				echo "File not exists!";
+			}
+		}else{
+			echo "Not a txt file!";
 		}
 		?>
       </p>
