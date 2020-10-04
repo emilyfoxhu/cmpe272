@@ -54,7 +54,7 @@
 
             if (!($file = fopen("password.txt", "r"))){
                 print("<p>Error! Could not reach password file.</p>");
-                //die();
+                die();
             }
             //do a loop to check username and password
             while (!feof($file) && !$userVerified){
