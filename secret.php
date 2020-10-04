@@ -65,6 +65,19 @@
                     $userVerified = 1;
                     if($PASSWORD == $field[1]){//verify password
                         print("<p>Thank you! Enjoy our secret page!</p>");
+        ?>
+        <h4>Here is the list of the current users of our website:</h4>
+        <p>Manager: Yi Hu</p>
+        <p>Emily List</p>
+        <p>Martin Smith</p>
+        <p>Eleanor Wang</p>
+        <p>Charlie Brown</p>
+        <p>Elvin Johnson</p>
+        <p>Mary Moore</p>
+        <p>Harry Lee</p>
+        <p>Allen Walker</p>
+        <p>Edwin White</p>
+        <?php
                     } else{
                         print("<p>Access Denied! Not able to log in!</p>");
                     }
