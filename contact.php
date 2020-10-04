@@ -48,7 +48,7 @@
       </p>
 		</br></br>
 	  <h3>secure section&nbsp;</h3>
-		<p><a href="secret.php">log in to have a look!</a></p>
+		<p><a href="secret.html">log in to have a look!</a></p>
 <strong></strong>    </article>
     <aside class="right_article"><img src="images/news.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
   </section>
