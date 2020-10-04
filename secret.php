@@ -3,9 +3,9 @@
 <head>
     <?php
         extract($_POST);
-        //default is empty string which is false
-        $USERNAME = "";
-        $PASSWORD = "";
+        //assign _POST array members to username and password
+        $USERNAME = $_POST[USERNAME];
+        $PASSWORD = $_POST[PASSWORD];
         $userVerified = 0; //if username is verified
         if (!$USERNAME && !$PASSWORD){
             print("<p>Please enter your username and password.</p>");//bothFieldsBlank
@@ -13,7 +13,7 @@
         } elseif (!$USERNAME){
             print("<p>Your username cannot be blank.</p>");//nameFieldBlank
             //die();
-        } else{
+        } elseif (!$PASSWORD){
             print("<p>Your password cannot be blank.</p>");//passwordFieldBlank
             //die();
         }
