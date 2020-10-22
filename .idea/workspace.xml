@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c0b7d6d-c214-47ed-8458-0a437b28df6e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/secret.php" beforeDir="false" afterPath="$PROJECT_DIR$/secret.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +67,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601762944216</updated>
-      <workItem from="1601762945868" duration="11720000" />
+      <workItem from="1601762945868" duration="12014000" />
+      <workItem from="1601775248922" duration="7000" />
+      <workItem from="1602295713390" duration="6000" />
+      <workItem from="1602911189140" duration="47000" />
+      <workItem from="1603389947157" duration="3701000" />
     </task>
     <servers />
   </component>
@@ -76,8 +88,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="180" key="FileChooserDialogImpl" timestamp="1602911228739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="180" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602911228739" />
   </component>
 </project>

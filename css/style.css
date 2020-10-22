@@ -94,13 +94,16 @@
 	letter-spacing: 1px;
 	margin-left: auto;
 	text-align: center;
-	width: 16%;
+	width: 14%;
 	transition: all 0.3s linear;
 }
 .secondary_header ul li:hover {
     color: #934141;
     cursor: pointer;
 }
+#menu ul li {
+}
+
 .left_article {
     /* [disabled]background-color: #FFFFFF; */
     width: 60%;
