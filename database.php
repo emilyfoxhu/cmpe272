@@ -42,15 +42,15 @@
             $selected = $_POST[select];
             $query = "SELECT " . $selected . " FROM heroku_b359504503ae920.user";
 
-            if (!($database = mysql_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
+            if (!($database = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
                 print("Cannot connect. <br />");
                 //die("Cannot connect to database");
 
-            if (!mysql_select_db("heroku_b359504503ae920", $database))
+            if (!mysqli_select_db("heroku_b359504503ae920", $database))
                 print("Cannot open database. <br />");
                 //die("Cannot open heroku database");
 
-            if (!($result = mysql_query($query, $database))){
+            if (!($result = mysqli_query($query, $database))){
                 print("Cannot execute query. <br />");
                 //die(mysql_error());
             }
@@ -58,13 +58,13 @@
         </p>
         <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
             <?php
-                for ($counter = 0; $row = mysql_fetch_row($result); $counter++){
+                for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
                     print("<tr>");
                     foreach($row as $key => $value)
                         print("<td>$value</td>");
                     print("</tr>");
                 }
-                mysql_close($database);
+                mysqli_close($database);
             ?>
         </table>
         <br/>Your search yielded <strong><?php print("$counter") ?></strong>
