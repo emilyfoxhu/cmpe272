@@ -39,7 +39,7 @@
         <p>
         <?php
             extract($_POST);
-            $select = "";
+            $select = $_POST[select];
             $query = "SELECT " . $select . " FROM USERS";
 
             if (!($database = mysql_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
