@@ -39,18 +39,20 @@
         <p>
         <?php
             extract($_POST);
-            $select = 0;
+            $select = "";
             $query = "SELECT " . $select . " FROM USERS";
 
             if (!($database = mysql_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
-                die("Cannot connect to database");
+                print("Cannot connect. <br />");
+                //die("Cannot connect to database");
 
             if (!mysql_select_db("heroku_b359504503ae920", $database))
-                die("Cannot open heroku database");
+                print("Cannot open database. <br />");
+                //die("Cannot open heroku database");
 
             if (!($result = mysql_query($query, $database))){
                 print("Cannot execute query. <br />");
-                die(mysql_error());
+                //die(mysql_error());
             }
         ?>
         </p>
