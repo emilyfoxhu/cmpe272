@@ -43,19 +43,17 @@
             $query = "SELECT " . $selected . " FROM heroku_b359504503ae920.user";
 
             if (!($link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
-                print("Cannot connect. <br />");
-                //die("Cannot connect to database");
+                die("Cannot connect to database");
 
             if (!mysqli_select_db($link, "heroku_b359504503ae920"))
-                print("Cannot open database. <br />");
-                //die("Cannot open heroku database");
+                die("Cannot open heroku database");
 
             if (!($result = mysqli_query($link, $query))){
-                print("Cannot execute query. <br />");
-                //die(mysql_error());
+                die(mysqli_error());
             }
         ?>
         </p>
+        <p>
         <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
             <?php
                 for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
@@ -67,7 +65,8 @@
                 mysqli_close($link);
             ?>
         </table>
-        <br/>Your search yielded <strong><?php print("$counter") ?></strong>
+        </p>
+        <p><br/>Your search yielded <strong><?php print("$counter") ?></strong></p>
 
     </section>
     <div class="row"> </div>
