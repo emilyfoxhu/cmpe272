@@ -32,10 +32,29 @@
     <article class="left_article">
       <h3>&nbsp;</h3>
       <h3>user creation&nbsp;</h3>
-		
-		</br></br>
+
+
+
+		</br></br></br>
+
 	  <h3>user search&nbsp;</h3>
-	
+      <form method = "post" action = "database.php">
+	  <p>Select a field to display:</p>
+      <p>
+      <select name = "select">
+        <option selected = "selected"></option>
+        <option>firstname</option>
+        <option>lastname</option>
+        <option>email</option>
+        <option>homephone</option>
+        <option>cellphone</option>
+      </select>
+      </p>
+      <p>
+      <input type = "submit" value = "Send Query" style="background-color: white;
+        color: saddlebrown; font-weight: bold"/>
+      </p>
+      </form>
 	
 <strong></strong>    </article>
     <aside class="right_article"><img src="images/news.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>

@@ -30,75 +30,42 @@
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="news.html">NEWS</a></li>
                 <li><a href="contact.php">CONTACTS</a></li>
+                <li><a href="user.html">USER</a></li>
             </ul>
         </nav>
     </header>
     <section>
+        <h3>search&nbsp;results</h3>
         <p>
         <?php
             extract($_POST);
-            //assign _POST array members to username and password
-            $USERNAME = $_POST[USERNAME];
-            $PASSWORD = $_POST[PASSWORD];
-            $userVerified = 0; //if username is verified
-            if (!$USERNAME && !$PASSWORD){
-                print("<p>Please enter your username and password.</p>");//bothFieldsBlank
-                //die();
-            } elseif (!$USERNAME){
-                print("<p>Your username cannot be blank.</p>");//nameFieldBlank
-                //die();
-            } elseif (!$PASSWORD){
-                print("<p>Your password cannot be blank.</p>");//passwordFieldBlank
-                //die();
-            }
+            $select = 0;
+            $query = "SELECT " . $select . " FROM USERS";
 
-            if (!($file = fopen("password.txt", "r"))){
-                print("<p>Error! Could not reach password file.</p>");
-                die();
-            }
-            //do a loop to check username and password
-            while (!feof($file) && !$userVerified){
-                $line = fgets($file, 255);
-                $line = chop($line);
-                $field = explode(",", $line, 2);//split username and password by , and form an array
-                if ($USERNAME == $field[0]){//verify username
-                    $userVerified = 1;
-                    if($PASSWORD == $field[1]){//verify password
-                        print("<p>Thank you! Enjoy our secret page!</p>");
-        ?>
-        <h4>Here is the list of the current users of our website:</h4>
-        <p>Manager: Yi Hu</p>
-        <p>Emily List</p>
-        <p>Martin Smith</p>
-        <p>Eleanor Wang</p>
-        <p>Charlie Brown</p>
-        <p>Elvin Johnson</p>
-        <p>Mary Moore</p>
-        <p>Harry Lee</p>
-        <p>Allen Walker</p>
-        <p>Edwin White</p>
-        <p>Sherlotte Wood</p>
-        <p>Sherry Snow</p>
-        <p>Victor Wane</p>
-        <p>Christ Li</p>
-        <p>Yi Chen</p>
-        <p>Micheal Jackson</p>
-        <p>Tom Deep</p>
-        <p>Ron Weasly</p>
-        <p>Alex Lane</p>
-        <p>Lyn Lee</p>
-        <?php
-                    } else{
-                        print("<p>Access Denied! Not able to log in!</p>");
-                    }
-                }
-            }
-            fclose($file);
-            if (!$userVerified){//if username does not exist, fail to log in
-                print("<p>The username does not exist! Failed to log in.</p>");
+            if (!($database = mysql_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
+                die("Cannot connect to database");
+
+            if (!mysql_select_db("heroku_b359504503ae920", $database))
+                die("Cannot open heroku database");
+
+            if (!($result = mysql_query($query, $database))){
+                print("Cannot execute query. <br />");
+                die(mysql_error());
             }
         ?>
         </p>
+        <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+            <?php
+                for ($counter = 0; $row = mysql_fetch_row($result); $counter++){
+                    print("<tr>");
+                    foreach($row as $key => $value)
+                        print("<td>$value</td>");
+                    print("</tr>");
+                }
+                mysql_close($database);
+            ?>
+        </table>
+        <br/>Your search yielded <strong><?php print("$counter") ?></strong>
 
     </section>
     <div class="row"> </div>
