@@ -48,7 +48,7 @@
             $home_phone = $_POST['home_phone'];
             $cell_phone = $_POST['cell_phone'];
 
-            $sql = "INSERT INTO 'heroku_b359504503ae920'.'user'(first_name, last_name, email, home_address, home_phone,
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
 cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
 
             if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
@@ -66,7 +66,7 @@ cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$ho
             }
         ?>
         </p>
-        <br /><p>The new user's information:</p><br/><br/>
+        <br /><p>The new user's information:</p>
         <p>
         <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
             <tr>

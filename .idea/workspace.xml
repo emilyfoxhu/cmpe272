@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3c0b7d6d-c214-47ed-8458-0a437b28df6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/createUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/createUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
       <workItem from="1601775248922" duration="7000" />
       <workItem from="1602295713390" duration="6000" />
       <workItem from="1602911189140" duration="47000" />
-      <workItem from="1603389947157" duration="20931000" />
+      <workItem from="1603389947157" duration="21477000" />
     </task>
     <servers />
   </component>
