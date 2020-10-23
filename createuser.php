@@ -40,27 +40,34 @@
         <h3>User Creation</h3>
         <p>
         <?php
-            extract($_POST);
-            $first_name = $_POST['first_name'];
-            $last_name = $_POST['last_name'];
-            $email = $_POST['email'];
-            $home_address = $_POST['home_address'];
-            $home_phone = $_POST['home_phone'];
-            $cell_phone = $_POST['cell_phone'];
+//            extract($_POST);
+//            $first_name = $_POST['first_name'];
+//            $last_name = $_POST['last_name'];
+//            $email = $_POST['email'];
+//            $home_address = $_POST['home_address'];
+//            $home_phone = $_POST['home_phone'];
+//            $cell_phone = $_POST['cell_phone'];
+            //create connection
+            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+            //check connection
+            if ($link->connect_error)
+                die("Connection failed: ". $link->connect_error);
 
-            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
-cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+            $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
+            $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+            $email = mysqli_real_escape_string($link, $_REQUEST['email']);
+            $home_address = mysqli_real_escape_string($link, $_REQUEST['home_address']);
+            $home_phone = mysqli_real_escape_string($link, $_REQUEST['home_phone']);
+            $cell_phone = mysqli_real_escape_string($link, $_REQUEST['cell_phone']);
 
             if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
                 print("<p>Your form is not complete.</p>");
                 print("<p>Creation Failed! Please return and resubmit your form.</p>");
             }
 
-            //create connection
-            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
-            //check connection
-            if ($link->connect_error)
-                die("Connection failed: ". $link->connect_error);
+            //insert sql
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
+    cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
 
             if($link->query($sql) === TRUE) {
                 //print("<p>Create User Successful!</p>");
