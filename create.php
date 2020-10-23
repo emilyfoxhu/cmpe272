@@ -54,27 +54,20 @@
             if ($link === false)
                 die("Connection failed: ". mysql_onnect_error());
 
-//            $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
-//            $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
-//            $email = mysqli_real_escape_string($link, $_REQUEST['email']);
-//            $home_address = mysqli_real_escape_string($link, $_REQUEST['home_address']);
-//            $home_phone = mysqli_real_escape_string($link, $_REQUEST['home_phone']);
-//            $cell_phone = mysqli_real_escape_string($link, $_REQUEST['cell_phone']);
-
             if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
                 print("<p>Your form is not complete.</p>");
                 print("<p>Creation Failed! Please return and resubmit your form.</p>");
             }
 
-            //insert sql
-            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
-    cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
-
-            if(mysqli_query($link, $sql)) {
-                echo "New record created!";
-            } else {
-                echo "Error: Can not execute $sql. " . mysqli_error($link);
-            }
+//            //insert sql
+//            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
+//    cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+//
+//            if(mysqli_query($link, $sql)) {
+//                echo "New record created!";
+//            } else {
+//                echo "Error: Can not execute $sql. " . mysqli_error($link);
+//            }
             mysqli_close($link);
         ?>
         </p>
