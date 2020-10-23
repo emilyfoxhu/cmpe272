@@ -30,75 +30,58 @@
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="news.html">NEWS</a></li>
                 <li><a href="contact.php">CONTACTS</a></li>
-				<li><a href="user.html">USER</a></li>
+                <li><a href="user.html">USER</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <article class="left_article">
         <h3>&nbsp;</h3>
-        <p>
+        <h3>User Creation</h3>
+        <br>
         <?php
             extract($_POST);
-            //assign _POST array members to username and password
-            $USERNAME = $_POST['USERNAME'];
-            $PASSWORD = $_POST['PASSWORD'];
-            $userVerified = 0; //if username is verified
-            if (!$USERNAME && !$PASSWORD){
-                print("<p>Please enter your username and password.</p>");//bothFieldsBlank
-                //die();
-            } elseif (!$USERNAME){
-                print("<p>Your username cannot be blank.</p>");//nameFieldBlank
-                //die();
-            } elseif (!$PASSWORD){
-                print("<p>Your password cannot be blank.</p>");//passwordFieldBlank
-                //die();
-            }
+            $first_name = $_POST['first_name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
+            $home_address = $_POST['home_address'];
+            $home_phone = $_POST['home_phone'];
+            $cell_phone = $_POST['cell_phone'];
 
-            if (!($file = fopen("password.txt", "r"))){
-                print("<p>Error! Could not reach password file.</p>");
-                die();
-            }
-            //do a loop to check username and password
-            while (!feof($file) && !$userVerified){
-                $line = fgets($file, 255);
-                $line = chop($line);
-                $field = explode(",", $line, 2);//split username and password by , and form an array
-                if ($USERNAME == $field[0]){//verify username
-                    $userVerified = 1;
-                    if($PASSWORD == $field[1]){//verify password
-                        print("<p>Thank you! Enjoy our secret page!</p>");
+            $sql = "INSERT INTO 'heroku_b359504503ae920'.'user'(first_name, last_name, email, home_address, home_phone,
+cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+
+            if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
+                print("<p>Your form is not complete.</p>");
+                print("<p>Creation Failed! Please return and resubmit your form.</p>");
+            } else{
+                if (!($link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
+                    die("Cannot connect to database");
+                if($link->query($sql) === TRUE) {
+                    print("<p>Create User Successful!</p>");
         ?>
-        <h4>Here is the list of the current users of our website:</h4>
-        <p>Manager: Yi Hu</p>
-        <p>Emily List</p>
-        <p>Martin Smith</p>
-        <p>Eleanor Wang</p>
-        <p>Charlie Brown</p>
-        <p>Elvin Johnson</p>
-        <p>Mary Moore</p>
-        <p>Harry Lee</p>
-        <p>Allen Walker</p>
-        <p>Edwin White</p>
-        <p>Sherlotte Wood</p>
-        <p>Sherry Snow</p>
-        <p>Victor Wane</p>
-        <p>Christ Li</p>
-        <p>Yi Chen</p>
-        <p>Micheal Jackson</p>
-        <p>Tom Deep</p>
-        <p>Ron Weasly</p>
-        <p>Alex Lane</p>
-        <p>Lyn Lee</p>
+            <br /><p>The new user's information:</p><br /><br />
+            <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Home Phone</th>
+                    <th>Cell Phone</th>
+                </tr>
+                <tr>
+                    <td><?php print("$first_name" . " $last_name");?></td>
+                    <td><?php print("$email");?></td>
+                    <td><?php print("$home_address");?></td>
+                    <td><?php print("$home_phone");?></td>
+                    <td><?php print("$cell_phone");?></td>
+                </tr>
+            </table>
         <?php
-                    } else{
-                        print("<p>Access Denied! Not able to log in!</p>");
-                    }
+                } else {
+                    echo "Error: " .$sql . "<br>" .$link->error;
                 }
-            }
-            fclose($file);
-            if (!$userVerified){//if username does not exist, fail to log in
-                print("<p>The username does not exist! Failed to log in.</p>");
+                mysqli_close($link);
             }
         ?>
         </p>

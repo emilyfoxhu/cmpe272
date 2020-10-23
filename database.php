@@ -35,11 +35,13 @@
         </nav>
     </header>
     <section>
-        <h3>search&nbsp;results</h3>
+        <article class="left_article">
+        <h3>&nbsp;</h3>
+        <h3>Search&nbsp;Results</h3>
         <p>
         <?php
             extract($_POST);
-            $selected = $_POST[select];
+            $selected = $_POST['select'];
             $query = "SELECT " . $selected . " FROM heroku_b359504503ae920.user";
 
             if (!($link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
@@ -67,6 +69,7 @@
         </table>
         </p>
         <p><br/>Your search yielded <strong><?php print("$counter") ?></strong></p>
+        </article>
 
     </section>
     <div class="row"> </div>
