@@ -48,8 +48,12 @@
             $home_phone = $_POST['home_phone'];
             $cell_phone = $_POST['cell_phone'];
 
+            //insert sql
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone, cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+
             //create connection
             $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+
             //check connection
             if ($link === false)
                 die("Connection failed: ". mysql_onnect_error());
@@ -57,15 +61,12 @@
             if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
                 print("<p>Your form is not complete.</p>");
                 print("<p>Creation Failed! Please return and resubmit your form.</p>");
-            }
-
-            //insert sql
-            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone, cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
-
-            if(mysqli_query($link, $sql)) {
-                echo "New record created!";
-            } else {
-                echo "Error: Can not execute $sql. " . mysqli_error($link);
+            } else{
+                if(mysqli_query($link, $sql)) {
+                    echo "New record created!";
+                } else {
+                    echo "Error: Can not execute $sql. " . mysqli_error($link);
+                }
             }
             mysqli_close($link);
         ?>
