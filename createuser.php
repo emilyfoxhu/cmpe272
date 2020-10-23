@@ -38,7 +38,6 @@
         <article class="left_article">
         <h3>&nbsp;</h3>
         <h3>User Creation</h3>
-        <br>
         <?php
             extract($_POST);
             $first_name = $_POST['first_name'];
@@ -59,31 +58,29 @@ cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$ho
                     die("Cannot connect to database");
                 if($link->query($sql) === TRUE) {
                     print("<p>Create User Successful!</p>");
-        ?>
-            <br /><p>The new user's information:</p><br /><br />
-            <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>Home Phone</th>
-                    <th>Cell Phone</th>
-                </tr>
-                <tr>
-                    <td><?php print("$first_name" . " $last_name");?></td>
-                    <td><?php print("$email");?></td>
-                    <td><?php print("$home_address");?></td>
-                    <td><?php print("$home_phone");?></td>
-                    <td><?php print("$cell_phone");?></td>
-                </tr>
-            </table>
-        <?php
                 } else {
                     echo "Error: " .$sql . "<br>" .$link->error;
                 }
                 mysqli_close($link);
             }
         ?>
+        <br /><p>The new user's information:</p><br /><br />
+        <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Home Phone</th>
+                <th>Cell Phone</th>
+            </tr>
+            <tr>
+                <td><?php print("$first_name" . " $last_name");?></td>
+                <td><?php print("$email");?></td>
+                <td><?php print("$home_address");?></td>
+                <td><?php print("$home_phone");?></td>
+                <td><?php print("$cell_phone");?></td>
+            </tr>
+        </table>
         </p>
         </article>
 

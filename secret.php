@@ -67,9 +67,9 @@
                 if ($USERNAME == $field[0]){//verify username
                     $userVerified = 1;
                     if($PASSWORD == $field[1]){//verify password
-                        print("<p>Thank you! Enjoy our secret page!</p>");
+                        print("<p><strong>Thank you! Enjoy our secret page!</strong></p>");
         ?>
-        <h4>Here is the list of the current users of our website:</h4>
+        <p><strong>Here is the list of the current users of our website:</strong></p>
         <p>Manager: Yi Hu</p>
         <p>Emily List</p>
         <p>Martin Smith</p>
