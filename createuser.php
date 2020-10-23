@@ -48,28 +48,28 @@
             $home_phone = $_POST['home_phone'];
             $cell_phone = $_POST['cell_phone'];
 
-//            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
-//cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
-//
-//            if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
-//                print("<p>Your form is not complete.</p>");
-//                print("<p>Creation Failed! Please return and resubmit your form.</p>");
-//            }
-//
-//            //create connection
-//            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
-//            //check connection
-//            if ($link->connect_error)
-//                die("Connection failed: ". $link->connect_error);
-//
-//            if($link->query($sql) === TRUE) {
-//                //print("<p>Create User Successful!</p>");
-//                echo "New record created!";
-//            } else {
-//                //print("<p>Failed to Create the User.</p>");
-//                echo "Error: " .$sql . "<br/>" .$link->error;
-//            }
-//            $link->close();
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
+cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+
+            if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
+                print("<p>Your form is not complete.</p>");
+                print("<p>Creation Failed! Please return and resubmit your form.</p>");
+            }
+
+            //create connection
+            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+            //check connection
+            if ($link->connect_error)
+                die("Connection failed: ". $link->connect_error);
+
+            if($link->query($sql) === TRUE) {
+                //print("<p>Create User Successful!</p>");
+                echo "New record created!";
+            } else {
+                //print("<p>Failed to Create the User.</p>");
+                echo "Error: " .$sql . "<br/>" .$link->error;
+            }
+            $link->close();
         ?>
         </p>
         <br /><p>The new user's information:</p>
