@@ -59,15 +59,14 @@
                 print("<p>Creation Failed! Please return and resubmit your form.</p>");
             }
 
-//            //insert sql
-//            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
-//    cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
-//
-//            if(mysqli_query($link, $sql)) {
-//                echo "New record created!";
-//            } else {
-//                echo "Error: Can not execute $sql. " . mysqli_error($link);
-//            }
+            //insert sql
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone, cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+
+            if(mysqli_query($link, $sql)) {
+                echo "New record created!";
+            } else {
+                echo "Error: Can not execute $sql. " . mysqli_error($link);
+            }
             mysqli_close($link);
         ?>
         </p>
