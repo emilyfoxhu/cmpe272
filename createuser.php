@@ -56,15 +56,20 @@ cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$ho
                 print("<p>Creation Failed! Please return and resubmit your form.</p>");
             }
 
-            if (!($link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
-                die("Cannot connect to database");
+            //create connection
+            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+            //check connection
+            if ($link->connect_error)
+                die("Connection failed: ". $link->connect_error);
+
             if($link->query($sql) === TRUE) {
-                print("<p>Create User Successful!</p>");
+                //print("<p>Create User Successful!</p>");
+                echo "New record created!";
             } else {
-                print("<p>Failed to Create the User.</p>");
-                //echo "Error: " .$sql . "<br/>" .$link->error;
+                //print("<p>Failed to Create the User.</p>");
+                echo "Error: " .$sql . "<br/>" .$link->error;
             }
-            mysqli_close($link);
+            $link->close();
         ?>
         </p>
         <br /><p>The new user's information:</p>
