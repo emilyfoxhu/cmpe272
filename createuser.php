@@ -48,10 +48,10 @@
 //            $home_phone = $_POST['home_phone'];
 //            $cell_phone = $_POST['cell_phone'];
             //create connection
-            $link = new mysqli("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+            $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
             //check connection
-            if ($link->connect_error)
-                die("Connection failed: ". $link->connect_error);
+            if ($link === false)
+                die("Connection failed: ". mysql_onnect_error());
 
             $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
             $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
@@ -69,14 +69,14 @@
             $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
     cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
 
-            if($link->query($sql) === TRUE) {
+            if(mysqli_query($link, $sql)) {
                 //print("<p>Create User Successful!</p>");
                 echo "New record created!";
             } else {
                 //print("<p>Failed to Create the User.</p>");
-                echo "Error: " .$sql . "<br/>" .$link->error;
+                echo "Error: Can not execute $sql. " . mysqli_error($link);
             }
-            $link->close();
+            mysqli_close($link);
         ?>
         </p>
         <br /><p>The new user's information:</p>
