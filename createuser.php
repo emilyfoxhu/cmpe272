@@ -38,6 +38,7 @@
         <article class="left_article">
         <h3>&nbsp;</h3>
         <h3>User Creation</h3>
+        <p>
         <?php
             extract($_POST);
             $first_name = $_POST['first_name'];
@@ -59,12 +60,14 @@ cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$ho
                 if($link->query($sql) === TRUE) {
                     print("<p>Create User Successful!</p>");
                 } else {
-                    echo "Error: " .$sql . "<br>" .$link->error;
+                    echo "Error: " .$sql . "<br/>" .$link->error;
                 }
                 mysqli_close($link);
             }
         ?>
-        <br /><p>The new user's information:</p><br /><br />
+        </p>
+        <br /><p>The new user's information:</p><br/><br/>
+        <p>
         <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
             <tr>
                 <th>Name</th>
