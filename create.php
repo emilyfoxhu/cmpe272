@@ -37,19 +37,66 @@
     <section>
         <article class="left_article">
         <h3>&nbsp;</h3>
-        <h3>Search&nbsp;Results</h3>
+        <h3>User Creation</h3>
         <p>
         <?php
-        extract($_POST);
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $home_address = $_POST['home_address'];
-        $home_phone = $_POST['home_phone'];
-        $cell_phone = $_POST['cell_phone'];
-        print("$first_name, $last_name, $email, $home_address, $home_phone, $cell_phone");
-        ?>
+            extract($_POST);
+            $first_name = $_POST['first_name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
+            $home_address = $_POST['home_address'];
+            $home_phone = $_POST['home_phone'];
+            $cell_phone = $_POST['cell_phone'];
 
+            //create connection
+            $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2", "heroku_b359504503ae920");
+            //check connection
+            if ($link === false)
+                die("Connection failed: ". mysql_onnect_error());
+
+//            $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
+//            $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+//            $email = mysqli_real_escape_string($link, $_REQUEST['email']);
+//            $home_address = mysqli_real_escape_string($link, $_REQUEST['home_address']);
+//            $home_phone = mysqli_real_escape_string($link, $_REQUEST['home_phone']);
+//            $cell_phone = mysqli_real_escape_string($link, $_REQUEST['cell_phone']);
+
+            if (!$first_name || !$last_name || !$email || !$home_address || !$home_phone || !$cell_phone){
+                print("<p>Your form is not complete.</p>");
+                print("<p>Creation Failed! Please return and resubmit your form.</p>");
+            }
+
+            //insert sql
+            $sql = "INSERT INTO heroku_b359504503ae920.user(first_name, last_name, email, home_address, home_phone,
+    cell_phone) VALUES ('$first_name', '$last_name', '$email', '$home_address', '$home_phone', '$cell_phone')";
+
+            if(mysqli_query($link, $sql)) {
+                echo "New record created!";
+            } else {
+                echo "Error: Can not execute $sql. " . mysqli_error($link);
+            }
+            mysqli_close($link);
+        ?>
+        </p>
+        <br /><p>The new user's information:</p>
+        <p>
+        <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Home Phone</th>
+                <th>Cell Phone</th>
+            </tr>
+            <tr>
+                <td><?php print("$first_name" . " $last_name");?></td>
+                <td><?php print("$email");?></td>
+                <td><?php print("$home_address");?></td>
+                <td><?php print("$home_phone");?></td>
+                <td><?php print("$cell_phone");?></td>
+            </tr>
+        </table>
+        </p>
         </article>
 
     </section>
