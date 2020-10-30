@@ -38,9 +38,9 @@
                 <td bgcolor='#00bfff'>Total Visits</td></tr>
             <?php
             $topVisit = 5;
-            asort($_COOKIE);//reverse sort by value
+            arsort($_COOKIE);//reverse sort by value
             foreach ($_COOKIE as $key => $value){
-                if ($topVisit >= 0 && $topVisit != 5)
+                if ( $topVisit > 0 )
                     print("<tr><td bgcolor='#faebd7'>$key</td>
                                <td bgcolor='#7fffd4'>$value</td></tr>");
                 $topVisit --;

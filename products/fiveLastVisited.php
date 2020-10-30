@@ -38,7 +38,7 @@
             <?php
             $count = 5;
             foreach (array_reverse($_COOKIE) as $key => $value){
-                if ($count >= 0 && $count != 5)
+                if ( count > 0 )
                     print("<tr><td bgcolor='#faebd7'>$key</td></tr>");
                 $count --;
             }
