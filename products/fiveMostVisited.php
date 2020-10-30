@@ -33,15 +33,18 @@
       <h3>&nbsp;</h3>
       <h3>Five Most Visited Products:</h3>
       <br/><br/>
-        <table border="5" cellpadding="0" cellspacing="10">
+        <table border="5" cellpadding="0" cellspacing="2">
+            <tr><td bgcolor='#00bfff'>Product Name</td>
+                <td bgcolor='#00bfff'>Total Visits</td></tr>
             <?php
             $topVisit = 5;
-            rsort($_COOKIE);//reverse sort by value
-            foreach ($_COOKIE as $key => $value)
-                if ($topVisit > 0) {
+            asort($_COOKIE);//reverse sort by value
+            foreach ($_COOKIE as $key => $value){
+                if ($topVisit >= 0 && $topVisit != 5)
                     print("<tr><td bgcolor='#faebd7'>$key</td>
-                               <td bgcolor='#7fffd4'>$value</td>");
-                }
+                               <td bgcolor='#7fffd4'>$value</td></tr>");
+                $topVisit --;
+            }
             ?>
         </table>
 

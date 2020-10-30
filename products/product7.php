@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("Turron", 1 + $_COOKIE['Turron'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -31,8 +37,8 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Turrón</h3>
-	  <p>Traditional Turrón mainly uses almonds and honey, and depending on the region, there are also different flavors of Turrón. For example, Turrón in Alicante is hard, while Turrón in Jijona is soft. The more ingredients in Turrón almonds, the better, and the price varies depending on the amount of almonds.</p>
+      <h3>Turron</h3>
+	  <p>Traditional Turron mainly uses almonds and honey, and depending on the region, there are also different flavors of Turron. For example, Turron in Alicante is hard, while Turron in Jijona is soft. The more ingredients in Turron almonds, the better, and the price varies depending on the amount of almonds.</p>
 	  <p><strong>Price: $7.00</strong></p>
 	  <p>Calories 4800.2kJ/2204.1kcal</p>
       <p>Protein 96.5g</p>

@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("Marzipan", 1 + $_COOKIE['Marzipan'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
