@@ -32,8 +32,18 @@
     <article class="left_article">
       <h3>&nbsp;</h3>
       <h3>Five Latest Visited Products:</h3>
-
-
+      <br/><br/>
+        <table border="5" cellpadding="0" cellspacing="10">
+            <?php
+            $count = 5;
+            foreach ($_COOKIE as $key => $value){
+                if ($count > 0) {
+                    print("<tr><td bgcolor='#faebd7'>$key</td>");
+                    $count --;
+                }
+            }
+            ?>
+        </table>
       <strong></strong>    </article>
   </section>
   <div class="row"> </div>
