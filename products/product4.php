@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("visitNum4", 1 + $_COOKIE['visitNum4'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -31,17 +37,17 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Flan</h3>
-	  <p>Flan is similar to pudding, with a thick layer of caramel topped on a vanilla custard. The most common configuration is called Flan de leche. The custard also has coffee and cocoa flavors, and can also be paired with strawberries and other fruits.</p>
-	  <p><strong>Price: $5.00</strong></p>
-	  <p>Calories 3927.7kJ/1100.3kcal</p>
-      <p>Protein 32.0g</p>
-	  <p>Carbohydrates 200.1g</p>
-	  <p>Fat 78.8g</p>
-	  <p>Fiber 1.2g</p>
+      <h3>Cup Cake</h3>
+	  <p>A cup cake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup. As with larger cakes, frosting and other cake decorations such as fruit and candy may be applied.</p>
+	  <p><strong>Price: $1.50</strong></p>
+      <p>Calories 590.1kJ/141.2kcal&</p>
+      <p>Protein 2.1g</p>
+      <p>Carbohydrates 14.6g</p>
+      <p>Fat 8.6g</p>
+      <p>Fiber 0.3g</p>
 
 <strong></strong>    </article>
-    <aside class="right_article"><img src="../images/product5.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
+    <aside class="right_article"><img src="../images/product4.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
   </section>
   <div class="row"> </div>
   <div class="row blockDisplay">

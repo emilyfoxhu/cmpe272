@@ -1,9 +1,7 @@
 <?php
     extract($_POST);
-    $visitNum = 1;
-    setcookie("$visitNum", 1 + $_COOKIE['$visitNum'], time()+60*60);
-    $visitNum = $_COOKIE['$visitNum'];
-    echo "Number of visit:" . $visitNum;
+    setcookie("visitNum1", 1 + $_COOKIE['visitNum1'], time() + 60);
+
 ?>
 
 <!doctype html>

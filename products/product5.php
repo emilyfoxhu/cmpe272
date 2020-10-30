@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("visitNum5", 1 + $_COOKIE['visitNum5'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -31,17 +37,17 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Fruit Cake</h3>
-	  <p>Fruitcake is a cake made with candied or dried fruit, nuts, and spices, and optionally soaked in spirits. In the United Kingdom, certain rich versions may be iced and decorated. Fruitcakes are typically served in celebration of weddings and Christmas. Given their rich nature, fruitcakes are most often consumed on their own, as opposed to with condiments (such as butter or cream).</p>
-	  <p><strong>Price: $2.00</strong></p>
-      <p>Calories 11454kJ/2740.2kcal&</p>
-      <p>Protein 48.3g</p>
-      <p>Carbohydrates 154.2g</p>
-      <p>Fat 224.8g</p>
-      <p>Fiber 10.6g</p>
+      <h3>Flan</h3>
+	  <p>Flan is similar to pudding, with a thick layer of caramel topped on a vanilla custard. The most common configuration is called Flan de leche. The custard also has coffee and cocoa flavors, and can also be paired with strawberries and other fruits.</p>
+	  <p><strong>Price: $5.00</strong></p>
+	  <p>Calories 3927.7kJ/1100.3kcal</p>
+      <p>Protein 32.0g</p>
+	  <p>Carbohydrates 200.1g</p>
+	  <p>Fat 78.8g</p>
+	  <p>Fiber 1.2g</p>
 
 <strong></strong>    </article>
-    <aside class="right_article"><img src="../images/product2.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
+    <aside class="right_article"><img src="../images/product5.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
   </section>
   <div class="row"> </div>
   <div class="row blockDisplay">

@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("visitNum3", 1 + $_COOKIE['visitNum3'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -31,17 +37,17 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Cup Cake</h3>
-	  <p>A cup cake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup. As with larger cakes, frosting and other cake decorations such as fruit and candy may be applied.</p>
-	  <p><strong>Price: $1.50</strong></p>
-      <p>Calories 590.1kJ/141.2kcal&</p>
-      <p>Protein 2.1g</p>
-      <p>Carbohydrates 14.6g</p>
-      <p>Fat 8.6g</p>
-      <p>Fiber 0.3g</p>
+      <h3>Matcha Cake</h3>
+	  <p>When matcha is mixed into dessert batters and then placed into the oven to bake, the beautiful green often browns from exposure to the oven. However, it is possible to produce desserts that are both a beautiful shade of green and have a deep green tea flavor.</p>
+	  <p><strong>Price: $3.00</strong></p>
+      <p>Calories 15119.8kJ/3615.5kcal&</p>
+      <p>Protein 45.3g</p>
+      <p>Carbohydrates 301.5g</p>
+      <p>Fat 253.9g</p>
+      <p>Fiber 2.8g</p>
 
 <strong></strong>    </article>
-    <aside class="right_article"><img src="../images/product4.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
+    <aside class="right_article"><img src="../images/product3.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
   </section>
   <div class="row"> </div>
   <div class="row blockDisplay">

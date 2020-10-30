@@ -1,3 +1,9 @@
+<?php
+    extract($_POST);
+    setcookie("visitNum2", 1 + $_COOKIE['visitNum2'], time() + 60);
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -31,17 +37,17 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Matcha Cake</h3>
-	  <p>When matcha is mixed into dessert batters and then placed into the oven to bake, the beautiful green often browns from exposure to the oven. However, it is possible to produce desserts that are both a beautiful shade of green and have a deep green tea flavor.</p>
-	  <p><strong>Price: $3.00</strong></p>
-      <p>Calories 15119.8kJ/3615.5kcal&</p>
-      <p>Protein 45.3g</p>
-      <p>Carbohydrates 301.5g</p>
-      <p>Fat 253.9g</p>
-      <p>Fiber 2.8g</p>
+      <h3>Fruit Cake</h3>
+	  <p>Fruitcake is a cake made with candied or dried fruit, nuts, and spices, and optionally soaked in spirits. In the United Kingdom, certain rich versions may be iced and decorated. Fruitcakes are typically served in celebration of weddings and Christmas. Given their rich nature, fruitcakes are most often consumed on their own, as opposed to with condiments (such as butter or cream).</p>
+	  <p><strong>Price: $2.00</strong></p>
+      <p>Calories 11454kJ/2740.2kcal&</p>
+      <p>Protein 48.3g</p>
+      <p>Carbohydrates 154.2g</p>
+      <p>Fat 224.8g</p>
+      <p>Fiber 10.6g</p>
 
 <strong></strong>    </article>
-    <aside class="right_article"><img src="../images/product3.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
+    <aside class="right_article"><img src="../images/product2.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
   </section>
   <div class="row"> </div>
   <div class="row blockDisplay">
