@@ -31,7 +31,7 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Five Latest Visited Products:</h3>
+      <h3>Five Latest Visited Products(the most recent is at the top):</h3>
       <br/><br/>
         <table border="5" cellpadding="0" cellspacing="2">
             <tr><td bgcolor="#00bfff">Product Name</td></tr>
