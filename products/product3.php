@@ -1,6 +1,6 @@
 <?php
     extract($_POST);
-    setcookie("Matcha_Cake", 1 + $_COOKIE['Matcha_Cake'], time() + 60);
+    setcookie("Matcha_Cake", 1 + $_COOKIE['Matcha_Cake'], time() + 60*5);
 
 ?>
 

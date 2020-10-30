@@ -1,6 +1,6 @@
 <?php
     extract($_POST);
-    setcookie("Turron", 1 + $_COOKIE['Turron'], time() + 60);
+    setcookie("Turron", 1 + $_COOKIE['Turron'], time() + 60*5);
 
 ?>
 

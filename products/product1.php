@@ -1,7 +1,7 @@
 <?php
     extract($_POST);
-    setcookie("Chiffon_Cake", 1 + $_COOKIE['Chiffon_Cake'], time() + 60);
-
+    setcookie("Chiffon_Cake", 1 + $_COOKIE['Chiffon_Cake'], time() + 60*5);
+    //cookie expire in 5 minutes
 ?>
 
 <!doctype html>

@@ -1,6 +1,6 @@
 <?php
     extract($_POST);
-    setcookie("Crema_Catalana", 1 + $_COOKIE['Crema_Catalana'], time() + 60);
+    setcookie("Crema_Catalana", 1 + $_COOKIE['Crema_Catalana'], time() + 60*5);
 
 ?>
 
