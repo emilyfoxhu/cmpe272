@@ -49,6 +49,12 @@
         </p>
         <p>
         <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+            <tr><td bgcolor='#00bfff'>First Name</td>
+                <td bgcolor='#00bfff'>Last Name</td>
+                <td bgcolor='#00bfff'>Email</td>
+                <td bgcolor='#00bfff'>Address</td>
+                <td bgcolor='#00bfff'>Home Phone</td>
+                <td bgcolor='#00bfff'>Cell Phone</td></tr>
             <?php
             for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
                 print("<tr>");
