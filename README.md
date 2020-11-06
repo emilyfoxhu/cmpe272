@@ -59,3 +59,15 @@ Click on "Click here to show your five most visited products!" to view 5 most vi
 <strong>NOTE: COOKIE expire time is 5 MINUTES!!!!!! </strong>  
 ![1](https://user-images.githubusercontent.com/33148410/97739898-b42d7e00-1a9d-11eb-8ef3-b3f18dcb2f69.jpg)
 ![2](https://user-images.githubusercontent.com/33148410/97739907-b5f74180-1a9d-11eb-9f42-8e01b63617b4.jpg)
+
+#### 6. Combined list of users  
+Use CURL to implement the following:  
+> •	For each company web site, create a php web app/link that shows a list of users from your own company.  
+•	Assume we have a group of 3 (Company A, Company B and Company C). Thus, we have  
+>>o	list_of_users_A that is stored in a database A in Company A host system  
+o	list_of_users_B that is stored in a database B in Company B host system  
+o	list_of_users_C that is stored in a database C in Company C host system  
+o	Each company web site needs to create a web link that shows list_of_users from all companies. You can access your local list_of_user via normal php database call, but you need to access remote company's database via CURL calls.  
+
+In the User Page--LIST OF USERS, click on two links to see users in our company and users of another company.
+![111](https://user-images.githubusercontent.com/33148410/98416860-c0cd4b80-2034-11eb-9abf-c4ef770e2aea.png)  
