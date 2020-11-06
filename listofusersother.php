@@ -48,6 +48,7 @@
             /*** Close cURL session*/
             curl_close ($ch);
             ?>
+
         </p>
 <strong></strong>    </article>
 
