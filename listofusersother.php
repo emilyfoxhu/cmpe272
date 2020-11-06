@@ -42,6 +42,9 @@
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             /*** Execute the cURL session*/
             $contents = curl_exec ($ch);
+            foreach(explode(',', $contents) as $content){
+                echo $content."<br/>";
+            }
             /*** Close cURL session*/
             curl_close ($ch);
             ?>
