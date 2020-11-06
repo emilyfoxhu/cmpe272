@@ -31,47 +31,37 @@
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
       <h3>&nbsp;</h3>
-      <h3>Users from us:</h3>
+      <h3>Users from another company:</h3>
         <p>
             <?php
-            $query = "SELECT * FROM heroku_b359504503ae920.user";
-
-            if (!($link = mysqli_connect("us-cdbr-east-02.cleardb.com", "b4f09a430a2ca0", "ca8322d2")))
-                die("Cannot connect to database");
-
-            if (!mysqli_select_db($link, "heroku_b359504503ae920"))
-                die("Cannot open heroku database");
-
-            if (!($result = mysqli_query($link, $query))){
-                die(mysqli_error());
-            }
+            /*** Initialize the cURL session*/
+            $ch = curl_init();
+            /*** Set the URL of the page or file to download.*/
+            curl_setopt($ch, CURLOPT_URL, 'http://dzaivc.com/user_list.php');
+            /*** Ask cURL to return the contents in a variable instead of simply echoing them to the browser.*/
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            /*** Execute the cURL session*/
+            $contents = curl_exec ($ch);
+            /*** Close cURL session*/
+            curl_close ($ch);
             ?>
         </p>
-        <p>
-        <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
-            <tr><td bgcolor='#00bfff'>First Name</td>
-                <td bgcolor='#00bfff'>Last Name</td>
-                <td bgcolor='#00bfff'>Email</td>
-                <td bgcolor='#00bfff'>Address</td>
-                <td bgcolor='#00bfff'>Home Phone</td>
-                <td bgcolor='#00bfff'>Cell Phone</td></tr>
-            <?php
-            for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
-                print("<tr>");
-                foreach($row as $key => $value)
-                    print("<td>$value</td>");
-                print("</tr>");
-            }
-            mysqli_close($link);
-            ?>
-        </table>
-        </p>
-        <p><br/>Your search yielded <strong><?php print("$counter") ?></strong></p>
 <strong></strong>    </article>
-    <aside>
-        <h3>Users from another company:</h3>
 
-    </aside>
+        <?php
+//        $query = "SELECT * FROM hbh.user_info";
+//
+//        if (!($link = mysqli_connect("dylanzhang081454567.ipagemysql.com", "dylan0814", "Victoria4152187810")))
+//            die("Cannot connect to database");
+//
+//        if (!mysqli_select_db($link, "hbh"))
+//            die("Cannot open heroku database");
+//
+//        if (!($result = mysqli_query($link, $query))){
+//            die(mysqli_error());
+//        }
+        ?>
+
   </section>
 
   <div class="row"> </div>
