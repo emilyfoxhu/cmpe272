@@ -37,7 +37,7 @@
             /*** Initialize the cURL session*/
             $ch = curl_init();
             /*** Set the URL of the page or file to download.*/
-            curl_setopt($ch, CURLOPT_URL, 'http://dzaivc.com/user_list.php');
+            curl_setopt($ch, CURLOPT_URL, 'http://dzaivc.com/user_list1.php');
             /*** Ask cURL to return the contents in a variable instead of simply echoing them to the browser.*/
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             /*** Execute the cURL session*/
