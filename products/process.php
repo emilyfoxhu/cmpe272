@@ -68,8 +68,22 @@
             $result3 = mysqli_query($conn, $sql3);
 
             ?>
-            <p>Average Rating of this product:<?php echo mysqli_fetch_row($result1);?></p>
-            <p>Total rating number of this product:<?php echo mysqli_fetch_row($result2);?></p>
+            <p>Average Rating of this product:
+                <?php
+                    for($i=0; $avg= mysqli_fetch_row($result1); $i++){
+                        foreach($avg as $key => $value)
+                            print($value);
+                    }
+                ?>
+            </p>
+            <p>Total rating number of this product:
+                <?php
+                    for($j=0; $num= mysqli_fetch_row($result2); $j++){
+                        foreach($num as $key => $value)
+                            print($value);
+                }
+                ?>
+            </p>
             <p>Review & Ratings:</p>
             <p>
             <table border="5" cellpadding="0" cellspacing="2">
