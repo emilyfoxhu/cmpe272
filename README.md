@@ -71,3 +71,4 @@ o	Each company web site needs to create a web link that shows list_of_users from
 
 In the User Page--LIST OF USERS, click on two links to see users in our company and users of another company.
 ![111](https://user-images.githubusercontent.com/33148410/98416860-c0cd4b80-2034-11eb-9abf-c4ef770e2aea.png)  
+![123](https://user-images.githubusercontent.com/33148410/98433506-7ec7f800-207c-11eb-9ce1-e0c939e4e2b4.png)  
