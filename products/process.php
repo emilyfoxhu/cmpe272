@@ -64,7 +64,7 @@
             $result2 = mysqli_query($conn, $sql2);
 
             //display all the rating details
-            $sql3 = "SELECT rating,review from heroku_b359504503ae920.rating where productName='$type' group by rating order by rating desc";
+            $sql3 = "SELECT rating,review from heroku_b359504503ae920.rating where productName='$type' order by rating desc";
             $result3 = mysqli_query($conn, $sql3);
 
             ?>
