@@ -49,6 +49,22 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+.columns_five {
+	width: 20%;
+	float: left;
+	font-family: "Source Sans Pro";
+	color: #CC4207;
+	line-height: 24px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
 .row .columns p {
 	padding-left: 10%;
 	padding-right: 10%;
@@ -56,6 +72,14 @@
 .container .columns h4 {
     text-align: center;
     color: #C45F05;
+}
+.row .columns_five p {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.container .columns_five h4 {
+	text-align: center;
+	color: #C45F05;
 }
 .primary_header {
     width: 100%;

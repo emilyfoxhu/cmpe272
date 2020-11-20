@@ -63,7 +63,7 @@
                 <label for="review">Review:</label>
                 <input type="text" name="review" id="review">
             </p>
-            <input type="hidden" name="type" value="Fruit Cake">
+            <input type="hidden" name="type" value="Fruit_Cake">
             <p>
                 <input type="submit" value="Submit Rating">
             </p>

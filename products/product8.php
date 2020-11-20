@@ -45,6 +45,29 @@
 	  <p>Carbohydrates 23.3g</p>
 	  <p>Fat 15.2g</p>
 	  <p>Fiber 3.5g</p>
+        <br/><br/>
+        <h3>add review and rating&nbsp;</h3>
+        <form method = "post" action = "process.php">
+            <p>
+                <label for="rating">Rating:</label>
+                <select name = "select">
+                    <option value="" disabled selected>choose rating</option>
+                    <option value=5>5</option>
+                    <option value=4>4</option>
+                    <option value=3>3</option>
+                    <option value=2>2</option>
+                    <option value=1>1</option>
+                </select>
+            </p>
+            <p>
+                <label for="review">Review:</label>
+                <input type="text" name="review" id="review">
+            </p>
+            <input type="hidden" name="type" value="Marzipan">
+            <p>
+                <input type="submit" value="Submit Rating">
+            </p>
+        </form>
 
 <strong></strong>    </article>
     <aside class="right_article"><img src="../images/product8.jpg" alt="" width="750" height="500" class="placeholder"/> </aside>
