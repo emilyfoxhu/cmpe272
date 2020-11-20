@@ -68,8 +68,8 @@
             $result3 = mysqli_query($conn, $sql3);
 
             ?>
-            <p>Average Rating of this product:<?php echo $result1;?></p>
-            <p>Total rating number of this product:<?php echo $result2;?></p>
+            <p>Average Rating of this product:<?php echo mysqli_fetch_row($result1);?></p>
+            <p>Total rating number of this product:<?php echo mysqli_fetch_row($result2);?></p>
             <p>Review & Ratings:</p>
             <p>
             <table border="5" cellpadding="0" cellspacing="2">
