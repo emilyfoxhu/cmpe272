@@ -56,15 +56,15 @@
             $query = mysqli_query($conn, $sql);
 
             //average rating result
-            $sql1 = "SELECT AVG(rating) as AVGRATE from heroku_b359504503ae920.rating where productName=" . "\"$type\"";
+            $sql1 = "SELECT AVG(rating) as AVGRATE from heroku_b359504503ae920.rating where productName='$type'";
             $result1 = mysqli_query($conn, $sql1);
 
             //total rating number
-            $sql2 = "SELECT count(rating) as TotalRating from heroku_b359504503ae920.rating where productName=" . "\"$type\"";
+            $sql2 = "SELECT count(rating) as TotalRating from heroku_b359504503ae920.rating where productName='$type'";
             $result2 = mysqli_query($conn, $sql2);
 
             //display all the rating details
-            $sql3 = "SELECT rating,review from heroku_b359504503ae920.rating where productName=" . "\"$type\"" . " group by rating order by rating desc";
+            $sql3 = "SELECT rating,review from heroku_b359504503ae920.rating where productName='$type' group by rating order by rating desc";
             $result3 = mysqli_query($conn, $sql3);
 
             ?>
