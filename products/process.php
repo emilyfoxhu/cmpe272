@@ -75,7 +75,9 @@
             <p>Total rating number of this product:<?php echo $result2;?></p>
             <p>Review & Ratings:</p>
             <p>
-            <table border = "1" cellpadding="3" cellspacing="2" style="background-color: #FFF439">
+            <table border="5" cellpadding="0" cellspacing="2">
+                <tr><td bgcolor='#00bfff'>Rating</td>
+                    <td bgcolor='#00bfff'>Review</td></tr>
                 <?php
                 for ($counter = 0; $row = mysqli_fetch_row($result3); $counter++){
                     print("<tr>");
