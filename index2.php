@@ -28,9 +28,8 @@
 			</form>
           <a href="#secondPage">Next</a>
         </div>
-		 
-			
     </div>
+	
     <div data-role="page" id="secondPage">
         <div data-role="header">
         	Q2:Do you like dog?
@@ -50,7 +49,9 @@
 				</p>
 			</form>
         <a href="#thirdPage">Next</a>
-    </div>
+		</div>
+	</div>
+	
 	
     <div data-role="page" id="thirdPage">
         <div data-role="header">
@@ -72,6 +73,7 @@
 			</form>
         <a href="#fourthPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="fourthPage">
         <div data-role="header">
@@ -93,7 +95,7 @@
 			</form>
         <a href="#fifthPage">Next</a>
     </div>
-	
+	</div>
 	
 	<div data-role="page" id="fifthPage">
         <div data-role="header">
@@ -115,6 +117,7 @@
 			</form>
         <a href="#sixthPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="sixthPage">
         <div data-role="header">
@@ -136,6 +139,7 @@
 			</form>
         <a href="#seventhPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="seventhPage">
         <div data-role="header">
@@ -157,6 +161,7 @@
 			</form>
         <a href="#eightthPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="eightthPage">
         <div data-role="header">
@@ -178,6 +183,7 @@
 			</form>
         <a href="#ninthPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="ninthPage">
         <div data-role="header">
@@ -199,6 +205,7 @@
 			</form>
         <a href="#tenthPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="tenthPage">
         <div data-role="header">
@@ -220,6 +227,7 @@
 			</form>
         <a href="#finalPage">Next</a>
     </div>
+	</div>
 	
 	<div data-role="page" id="finalPage">
         <div data-role="header">
@@ -244,6 +252,7 @@
             Footer of final page
         </div>
     </div>
+	</div>
 </html>
 
 <script type = "text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//np.lexity.com/embed/YW/866f949dfc4b938ab836dd1f5449b291?id=195e5314a8ea"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script>
