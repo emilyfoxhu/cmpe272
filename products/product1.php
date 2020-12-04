@@ -2,6 +2,9 @@
     extract($_POST);
     setcookie("Chiffon_Cake", 1 + $_COOKIE['Chiffon_Cake'], time() + 60*5);
     //cookie expire in 5 minutes
+
+    // Include the history functionality
+    include_once('../history.php');
 ?>
 <!doctype html>
 <html>
@@ -24,7 +27,7 @@
       <ul>
         <li><a href="../index.php">HOME</a></li>
         <li><a href="../about.html">ABOUT</a></li>
-        <li><a href="../products.html">PRODUCTS</a></li>
+        <li><a href="../products.php">PRODUCTS</a></li>
         <li><a href="../services.html">SERVICES</a></li>
         <li><a href="../news.html">NEWS</a></li>
         <li><a href="../contact.php">CONTACTS</a></li>

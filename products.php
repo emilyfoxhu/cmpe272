@@ -20,7 +20,7 @@
       <ul>
         <li><a href="index.php">HOME</a></li>
 		<li><a href="about.html">ABOUT</a></li>
-        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="products.php">PRODUCTS</a></li>
         <li><a href="services.html">SERVICES</a></li>
         <li><a href="news.html">NEWS</a></li>
         <li><a href="contact.php">CONTACTS</a></li>
@@ -33,6 +33,25 @@
     <article class="left_article">
       <h3>&nbsp;</h3>
       <h3>products</h3>
+        <?php
+
+        // Include the history functionality
+        include_once('history.php');
+
+        // Displaying the contents of history for checking
+        $ct = 0;
+        foreach($_SESSION['pageadd'] as $pageadd)
+        {
+            $ct = $ct+1;
+            echo 'Page History Entry #'.$ct.' of '.
+                count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
+        }
+        echo '<br>';
+
+        // Include a page to allow destroying the session
+        // (for code check purpose)
+        echo "<a href=destroy.php>Destroy Session</a>";
+        ?>
     <strong></strong>    </article>
     <div class="row">
         <div class="columns">
@@ -109,8 +128,8 @@
 
         <aside class="right_article"> </aside>
     </article>
-  </section>
 
+  </section>
 
   <div class="row"> </div>
   <div class="row blockDisplay">
