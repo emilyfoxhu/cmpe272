@@ -20,21 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c0b7d6d-c214-47ed-8458-0a437b28df6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/destroy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/history.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product1.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product10.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product10.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product2.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product3.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product4.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product5.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product6.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product7.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product8.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/product9.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/product9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listofuserslocal.php" beforeDir="false" afterPath="$PROJECT_DIR$/listofuserslocal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listofusersother.php" beforeDir="false" afterPath="$PROJECT_DIR$/listofusersother.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/fiveLastVisited.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/fiveLastVisited.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/fiveMostVisited.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/fiveMostVisited.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/top5RatingProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/top5RatingProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret.html" beforeDir="false" afterPath="$PROJECT_DIR$/secret.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret.php" beforeDir="false" afterPath="$PROJECT_DIR$/secret.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <workItem from="1606502796595" duration="1657000" />
       <workItem from="1606504785173" duration="1046000" />
       <workItem from="1606506234794" duration="2397000" />
-      <workItem from="1607107217281" duration="3943000" />
+      <workItem from="1607107217281" duration="4289000" />
     </task>
     <servers />
   </component>

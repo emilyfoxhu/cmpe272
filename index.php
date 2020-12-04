@@ -19,7 +19,7 @@
       <ul>
         <li><a href="index.php">HOME</a></li>
 		<li><a href="about.html">ABOUT</a></li>
-        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="products.php">PRODUCTS</a></li>
         <li><a href="services.html">SERVICES</a></li>
         <li><a href="news.html">NEWS</a></li>
         <li><a href="contact.php">CONTACTS</a></li>
