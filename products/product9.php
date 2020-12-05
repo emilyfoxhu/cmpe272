@@ -3,7 +3,7 @@
     setcookie("Crema_Catalana", 1 + $_COOKIE['Crema_Catalana'], time() + 60*5);
 
     // Include the history functionality
-    include_once('../history.php');
+    include_once('history.php');
 ?>
 
 <!doctype html>

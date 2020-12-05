@@ -3,7 +3,7 @@
     setcookie("Cup_Cake", 1 + $_COOKIE['Cup_Cake'], time() + 60*5);
 
     // Include the history functionality
-    include_once('../history.php');
+    include_once('history.php');
 ?>
 
 <!doctype html>

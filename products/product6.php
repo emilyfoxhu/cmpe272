@@ -3,7 +3,7 @@
     setcookie("Churros", 1 + $_COOKIE['Churros'], time() + 60*5);
 
     // Include the history functionality
-    include_once('../history.php');
+    include_once('history.php');
 ?>
 
 <!doctype html>
