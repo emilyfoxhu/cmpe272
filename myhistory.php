@@ -26,8 +26,10 @@ foreach($_SESSION['pageadd'] as $pageadd)
 $sql3 = "SELECT history from heroku_b359504503ae920.history";
 $result = mysqli_query($conn, $sql3);
 for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
-    foreach($row as $key => $value)
-        print("$value\n");
+    foreach($row as $key => $value){
+        print("$value");
+        ?><br/><?php
+    }
 }
 mysqli_close($conn);
 echo '<br>';
