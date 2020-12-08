@@ -1,9 +1,9 @@
 <?php
     extract($_POST);
     setcookie("Marzipan", 1 + $_COOKIE['Marzipan'], time() + 60*5);
-
+    setcookie("Marzipan", 1 + $_COOKIE['Chiffon_Cake'], time() + 60*5, "/", "http://dzaivc.com/user_tracking.php", 1 );
     // Include the history functionality
-    include_once('history.php');
+    include_once('../history.php');
 ?>
 
 <!doctype html>

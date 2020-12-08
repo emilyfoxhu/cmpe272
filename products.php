@@ -39,49 +39,24 @@
       <h3>products</h3>
         <?php
 
-//        // Include the history functionality
-//        include_once('history.php');
-//
-//        // Displaying the contents of history for checking
-//        $ct = 0;
-//        foreach($_SESSION['pageadd'] as $pageadd)
-//        {
-//            $ct = $ct+1;
-//            echo 'Page History Entry #'.$ct.' of '.
-//                count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
-//        }
-//        echo '<br>';
-//
-//        // Include a page to allow destroying the session
-//        // (for code check purpose)
-//        echo "<a href=destroy.php>Destroy Session</a>";
-        ?>
-        <?php
+        // Include the history functionality
+        include_once('history.php');
 
-        // To be added to top of php file which serves the AJAX Request
-        // Checks for HTTP_ORIGIN against multiple domains
-
-        $http_origin = $_SERVER['HTTP_ORIGIN'];
-        if ($http_origin == "http://dzaivc.com/mainhomepage.php" || $http_origin == "http://www.domain2.com" || $http_origin == "http://www.domain3.info")
+        // Displaying the contents of history for checking
+        $ct = 0;
+        foreach($_SESSION['pageadd'] as $pageadd)
         {
-            header('Access-Control-Allow-Origin: *');
+            $ct = $ct+1;
+            echo 'Page History Entry #'.$ct.' of '.
+                count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
         }
+        echo '<br>';
 
-        header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-        header('Access-Control-Max-Age: 1000');
-
-        if(array_key_exists('HTTP_ACCESS_CONTROL_REQUEST_HEADERS', $_SERVER)) {
-            header('Access-Control-Allow-Headers: '
-                . $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']);
-        } else {
-            header('Access-Control-Allow-Headers: *');
-        }
-
-        if("OPTIONS" == $_SERVER['REQUEST_METHOD']) {
-            exit(0);
-        }
-
+        // Include a page to allow destroying the session
+        // (for code check purpose)
+        echo "<a href=destroy.php>Destroy Session</a>";
         ?>
+
     <strong></strong>    </article>
     <div class="row">
         <div class="columns">
