@@ -23,6 +23,7 @@ foreach($_SESSION['pageadd'] as $pageadd)
     $output = 'Page History Entry #'.$ct.' of '.count($_SESSION['pageadd']).' is '.$pageadd;
     //insert sql
     $sql = "INSERT INTO heroku_b359504503ae920.history(id, history) VALUES ('$ct', '$output')";
+    $query = mysqli_query($conn, $sql);
 }
 
 $sql3 = "SELECT history from heroku_b359504503ae920.history";
