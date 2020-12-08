@@ -11,8 +11,9 @@ foreach($_SESSION['pageadd'] as $pageadd)
     echo 'Page History Entry #'.$ct.' of '.
         count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
 }
-echo '<br>';
 echo $pageadd;
+echo '<br>';
+
 
 // Include a page to allow destroying the session
 // (for code check purpose)
