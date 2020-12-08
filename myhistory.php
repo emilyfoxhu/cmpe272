@@ -12,9 +12,6 @@ $ct = 0;
 if (!($conn = mysqli_connect($servername,$username,$password,$dbname)))
     die("Cannot connect to database");
 
-//insert rating into db
-$query = mysqli_query($conn, $sql);
-
 // Displaying the contents of history for checking
 
 foreach($_SESSION['pageadd'] as $pageadd)
