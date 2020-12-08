@@ -12,6 +12,7 @@ foreach($_SESSION['pageadd'] as $pageadd)
         count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
 }
 echo '<br>';
+echo $pageadd;
 
 // Include a page to allow destroying the session
 // (for code check purpose)
