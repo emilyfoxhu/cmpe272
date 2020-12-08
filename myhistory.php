@@ -8,10 +8,10 @@ $ct = 0;
 foreach($_SESSION['pageadd'] as $pageadd)
 {
     $ct = $ct+1;
+    echo $pageadd;
     echo 'Page History Entry #'.$ct.' of '.
         count($_SESSION['pageadd']).' is '.$pageadd.'<br>';
 }
-echo $pageadd;
 echo '<br>';
 
 
