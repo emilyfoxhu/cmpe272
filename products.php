@@ -37,6 +37,7 @@
     <article class="left_article">
       <h3>&nbsp;</h3>
       <h3>products</h3>
+        <a href="myhistory.php">tracking users</a><br/>
         <?php
 
         // Include the history functionality
