@@ -7,13 +7,14 @@
         die("Cannot connect to database");
 
     //productName,AVGrating,ReviewNum
-    $result = mysqli_query($conn,"SELECT productName, AVG(rating) as AVGrating, count(rating) as ReviewNum from heroku_b359504503ae920.rating group by productName order by AVGrating desc limit 5");
+    $result = mysqli_query($conn,"SELECT productName, AVG(rating) as AVGrating from heroku_b359504503ae920.rating group by productName order by AVGrating desc limit 5");
 
     for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
 
-        foreach($row as $key => $value)
-            print("$value");
-
+        foreach($row as $key => $value){
+            print("$value ");
+            print("\n");
+        }
     }
     mysqli_close($conn);
 ?>
