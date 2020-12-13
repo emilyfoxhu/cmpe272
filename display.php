@@ -12,7 +12,7 @@ list($sid, $ext) = explode('-', $_GET['sessid']);
 if($sid) session_id($sid);
 session_start();
 $session = session_id();
-echo $session;
+//echo $session;
 if (!($conn = mysqli_connect($servername,$username,$password,$dbname)))
     die("Cannot connect to database");
 

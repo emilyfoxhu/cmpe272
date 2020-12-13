@@ -48,6 +48,7 @@ include_once('history.php');
         <li><a href="news.html">NEWS</a></li>
         <li><a href="contact.php">CONTACTS</a></li>
 		<li><a href="user.html">USER</a></li>
+          <li><a href="destroy.php">Market</a></li>
       </ul>
     </nav>
   </header>

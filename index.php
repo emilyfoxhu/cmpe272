@@ -25,11 +25,7 @@ session_start();
 <div class="container">
   <header>
     <div class="primary_header">
-        <footer><em>
-            <form action="destroy.php">
-                <input type="submit" value="Back to Market" />
-            </form>
-        </em></footer>
+
         <h1 class="title"> Bread &amp; Sweets</h1>
     </div>
     <nav class="secondary_header" id="menu">
@@ -41,6 +37,7 @@ session_start();
         <li><a href="news.html">NEWS</a></li>
         <li><a href="contact.php">CONTACTS</a></li>
 		<li><a href="user.html">USER</a></li>
+		<li><a href="destroy.php">Market</a></li>
       </ul>
     </nav>
   </header>
