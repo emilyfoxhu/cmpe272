@@ -1,3 +1,16 @@
+<?php
+list($sid, $ext) = explode('-', $_GET['sessid']);
+//echo 'sid is' .$sid . '\n';
+if($sid) {
+    session_id($sid);
+    session_start();
+}
+else {
+    session_regenerate_id();
+    session_start();
+}
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -13,7 +26,7 @@
   <header>
     <div class="primary_header">
         <footer><em>
-            <form action="https://dzaivc.com/mainhomepage.php">
+            <form action="destroy.php">
                 <input type="submit" value="Back to Market" />
             </form>
         </em></footer>
