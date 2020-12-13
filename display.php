@@ -17,7 +17,7 @@ if (!($conn = mysqli_connect($servername,$username,$password,$dbname)))
     die("Cannot connect to database");
 
 // Displaying the contents of history for checking
-echo $session;
+//echo $session;
 $sql3 = "SELECT history from heroku_b359504503ae920.history where session='$session'";
 $result = mysqli_query($conn, $sql3);
 for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){

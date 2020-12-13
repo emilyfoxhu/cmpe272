@@ -1,7 +1,7 @@
 <?php
 
 // Include the history functionality
-include_once('history.php');
+//include_once('history.php');
 
 $servername="us-cdbr-east-02.cleardb.com";
 $username="b4f09a430a2ca0";
