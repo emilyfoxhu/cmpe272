@@ -25,11 +25,11 @@ session_start();
 <div class="container">
   <header>
     <div class="primary_header">
-
         <h1 class="title"> Bread &amp; Sweets</h1>
     </div>
     <nav class="secondary_header" id="menu">
       <ul>
+        <li><a href="destroy.php">Market</a></li>
         <li><a href="index.php">HOME</a></li>
 		<li><a href="about.html">ABOUT</a></li>
         <li><a href="products.php">PRODUCTS</a></li>
@@ -37,7 +37,6 @@ session_start();
         <li><a href="news.html">NEWS</a></li>
         <li><a href="contact.php">CONTACTS</a></li>
 		<li><a href="user.html">USER</a></li>
-		<li><a href="destroy.php">Market</a></li>
       </ul>
     </nav>
   </header>

@@ -1,7 +1,7 @@
 <?php
     extract($_POST);
     setcookie("Fruit_Cake", 1 + $_COOKIE['Fruit_Cake'], time() + 60*5);
-    setcookie("Fruit_Cake", 1 + $_COOKIE['Chiffon_Cake'], time() + 60*5, "/", "http://dzaivc.com/user_tracking.php", 1 );
+
     // Include the history functionality
     include_once('../history.php');
 ?>
@@ -20,15 +20,11 @@
 <div class="container">
   <header>
     <div class="primary_header">
-        <footer><em>
-            <form action="https://dzaivc.com/mainhomepage.php">
-                <input type="submit" value="Back to Market" />
-            </form>
-        </em></footer>
         <h1 class="title"> Bread &amp; Sweets</h1>
     </div>
     <nav class="secondary_header" id="menu">
       <ul>
+        <li><a href="../destroy.php">Market</a></li>
         <li><a href="../index.php">HOME</a></li>
         <li><a href="../about.html">ABOUT</a></li>
         <li><a href="../products.php">PRODUCTS</a></li>

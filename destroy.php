@@ -1,14 +1,14 @@
 <?php
-//session_start();
-//session_destroy();
-//header('location:products.php');
-
 include_once("myhistory.php");
 
 session_start();
 session_destroy();
 //header('location:products.php');
 header('location:https://dzaivc.com/mainhomepage.php');
+
+//session_start();
+//session_destroy();
+//header('location:products.php');
 
 //$servername="us-cdbr-east-02.cleardb.com";
 //$username="b4f09a430a2ca0";
