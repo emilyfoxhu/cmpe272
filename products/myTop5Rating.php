@@ -1,6 +1,6 @@
 <table border="5" cellpadding="0" cellspacing="2">
     <tr><td>Product Name</td>
-        <td'>Average Rating</td></tr>
+        <td>Average Rating</td></tr>
 <?php
     $servername="us-cdbr-east-02.cleardb.com";
     $username="b4f09a430a2ca0";
@@ -10,7 +10,7 @@
         die("Cannot connect to database");
 
     //productName,AVGrating,ReviewNum
-    $result = mysqli_query($conn,"SELECT productName, AVG(rating) as AVGrating from heroku_b359504503ae920.rating group by productName order by AVGrating desc limit 5");
+    $result = mysqli_query($conn,"SELECT productName, cast(AVG(rating) as decimal(2,1)) as AVGrating from heroku_b359504503ae920.rating group by productName order by AVGrating desc limit 5");
 
     for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
 
