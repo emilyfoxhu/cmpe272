@@ -1,3 +1,6 @@
+<table border="5" cellpadding="0" cellspacing="2">
+    <tr><td>Product Name</td>
+        <td'>Average Rating</td></tr>
 <?php
     $servername="us-cdbr-east-02.cleardb.com";
     $username="b4f09a430a2ca0";
@@ -12,9 +15,12 @@
     for ($counter = 0; $row = mysqli_fetch_row($result); $counter++){
 
         foreach($row as $key => $value){
-            print("$value ");
-            print("\n");
+            print("<tr>");
+            foreach($row as $key => $value)
+                print("<td>$value</td>");
+            print("</tr>");
         }
     }
     mysqli_close($conn);
 ?>
+</table>
