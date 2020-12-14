@@ -12,7 +12,7 @@
     $products = [];
     $count = 0;
     while ($row = mysqli_fetch_row($result)) {
-        array_push($row, "http://www.yi-playground.com/products");
+        array_push($row, "http://www.yi-playground.com/products.php");
         $products[$count] =  $row;
         $count += 1;
     }
